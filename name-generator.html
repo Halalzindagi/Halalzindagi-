@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islamic Name Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function generateName() {
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const name = gender === 'boy' ? 'Ahmed - Praiseworthy (احمد)' : 'Aisha - Alive, Living (عائشة)';
+      document.getElementById('result').innerText = 'Generated Name: ' + name;
+    }
+  </script>
+</head>
+<body>
+  <h1>Islamic Name Generator</h1>
+  <label><input type="radio" name="gender" value="boy" checked /> Boy</label>
+  <label><input type="radio" name="gender" value="girl" /> Girl</label>
+  <br /><br />
+  <button onclick="generateName()">Generate Name</button>
+  <p id="result"></p>
+</body>
+</html>
